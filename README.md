@@ -1,4 +1,6 @@
-![alt text](https://github.com/voicedevco/alexa-flash-briefing-skill-dynamodb-template/raw/master/images/voicedevco-github-logo "VoicedevCo Logo")
+![VoicedevCo Logo][logo]
+
+[logo]: https://github.com/voicedevco/alexa-flash-briefing-skill-dynamodb-template/blob/master/images/voicedevco-github-logo.png 
 
 
 # alexa-flash-briefing-skill-dynamodb-template
