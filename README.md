@@ -25,7 +25,7 @@ Alexa flash briefing expects either a JSON or RSS format response with your cont
 }
 ```
 
-For more info on the response format see their documentation: [https://developer.amazon.com/docs/flashbriefing/flash-briefing-skill-api-feed-reference.html#text-content-items]
+For more info on the response format see their documentation: https://developer.amazon.com/docs/flashbriefing/flash-briefing-skill-api-feed-reference.html#text-content-items
 
 DynamoDB is capable of returning this response format without any transformation. The index.js file takes advantage of this. To do this we create a table with the following structure:
 
