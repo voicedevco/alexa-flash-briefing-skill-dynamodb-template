@@ -6,7 +6,7 @@
 # alexa-flash-briefing-skill-dynamodb-template
 A template for creating an alexa flash briefing skill backed by a dynamodb table
 
-#Description
+# Description
 This template node.js file can be used to create a flash briefing skill with minimal coding and configuration.
 
 We achieve this by creating the following setup:
@@ -37,14 +37,14 @@ Once this is in place, the records are called by current date using the format: 
 
 Once everything is in place, populate your DynamoDB table with a flash briefing message for each day and this will be read to the user when they open your flash briefing skill.
 
-#Setup Lambda and API gateway
+# Setup Lambda and API gateway
 Create function -> Blueprints -> (Add filter) -> microservice-http-endpoint
 
 This will create an API gateway for you as well as a lambda function in nodejs 8.10. Set the permissions for the API to 'Open'.
 
 Using the online editor, replace the contents of the index.js file with the index.js in this repository. You'll also need to change the params.TableName = "NameOfYourTable"; line to whatever you want to call your own Dynamo DB table.
 
-#Setting up permissions to talk to DynamoDB
+# Setting up permissions to talk to DynamoDB
 In order to talk to DynamoDB you'll need to create a new execution role with a policy applied to permit read-only access to databases. The easiest way to do this is to use the default read-only dynamodb policy arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess.
 
 Once done you'll see all of the new Dynamodb related functions appear next to your lambda function.
