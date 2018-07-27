@@ -15,23 +15,27 @@ Amazon Alexa -> Amazon API Gateway -> AWS Lambda -> DynamoDB
 
 Alexa flash briefing expects either a JSON or RSS format response with your content. A JSON response looks like this:
 
-```{
+```
+{
   "uid": "urn:uuid:1335c695-cfb8-4ebb-abbd-80da344efa6b",
   "updateDate": "2016-05-23T00:00:00.0Z",
   "titleText": "Amazon Developer Blog, week in review May 23rd",
   "mainText": "Meet Echosim. A new online community tool for developers that simulates the look and feel of an Amazon Echo.",
   "redirectionUrl": "https://developer.amazon.com/public/community/blog"
-}```
+}
+```
 
 For more info on the response format see their documentation: [https://developer.amazon.com/docs/flashbriefing/flash-briefing-skill-api-feed-reference.html#text-content-items]
 
 DynamoDB is capable of returning this response format without any transformation. The index.js file takes advantage of this. To do this we create a table with the following structure:
 
-```Key:    updateDate      String
+```
+Key:    updateDate      String
 Field:  uid             String
 Field:  titleText       String
 Field:  mainText        String
-Field:  redirectionUrl  String````
+Field:  redirectionUrl  String
+```
 
 Once this is in place, the records are called by current date using the format: yyyy + '-' + mm + '-' + dd + 'T00:00:00.0Z';
 
